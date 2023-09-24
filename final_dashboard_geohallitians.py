@@ -57,7 +57,7 @@ query = """SELECT
     SUM(WCUT) AS Suma_WCUT,
     SUM(BWPD) AS Suma_BWPD,
     SUM(BOPD) AS Suma_BOPD
-FROM Critical_variables_updated
+FROM critical_variables_updated
 GROUP BY Año, Mes
 """
 
@@ -79,7 +79,7 @@ FROM (
         AND DATE_FORMAT(Date, '%H:%i') = '00:00'
         AND (SELECT MAX(RunLife) FROM critical_variables_updated WHERE Well_Id = critical_variables_updated.Well_Id AND RunLife = 1.0) IS NOT NULL
 ) AS cvu
-JOIN Wells_Master_Updated AS wmu ON cvu.Well_Id = wmu.Well_Id
+JOIN wells_master_updated AS wmu ON cvu.Well_Id = wmu.Well_Id
 GROUP BY cvu.Well_Id, cvu.Date, wmu.UWI, wmu.Sistema_Levantamiento;
 """
 
@@ -134,10 +134,10 @@ ON a. Well_Id = b. Well_Id
 GROUP BY UWI, Mes, Año
 """
 
-query_tarjetas_var_2 = "SELECT Caudal, WOR FROM Critical_Variables_Updated"
+query_tarjetas_var_2 = "SELECT Caudal, WOR FROM critical_variables_updated"
 query_tarjetas_var_3 = "SELECT Hours, Oil, Water, Gas FROM data_diaria_volumetrica_updated"
 
-querymap = "SELECT UWI, Geo_latitude, Geo_longitude, Wellhead_depth, Water_depth FROM Wells_Master_Updated"
+querymap = "SELECT UWI, Geo_latitude, Geo_longitude, Wellhead_depth, Water_depth FROM wells_master_updated"
 
 # Obtener datos
 df_query_var_3 = pd.read_sql(query_var_3, conexion)
