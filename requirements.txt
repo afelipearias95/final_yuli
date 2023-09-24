@@ -29,7 +29,6 @@ executing==1.2.0
 Fiona==1.9.4.post1
 Flask==2.2.5
 folium==0.14.0
-fonttools==4.42.1
 geopandas==0.13.2
 greenlet==2.0.2
 idna==3.4
