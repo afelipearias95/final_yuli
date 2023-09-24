@@ -8,9 +8,9 @@ from dash import html
 
 def get_database_connection():
     db_config = {
-        "host": "localhost",
+        "host": "104.196.38.12",
         "user": "root",
-        "password": "123456789",
+        "password": "z8]$>V;XU]@c,G}*",
         "database": "tablero_geohallitians"
     }
     
