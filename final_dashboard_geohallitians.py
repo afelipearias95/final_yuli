@@ -9,7 +9,7 @@ import dash_leaflet.express as dlx
 from dash import dcc, html, Input, Output
 from datetime import datetime
 import calendar
-import pyautogui
+#import pyautogui
 import io
 import base64
 from PIL import Image
