@@ -45,7 +45,7 @@ MarkupSafe==2.1.3
 matplotlib
 matplotlib-inline
 MouseInfo==0.1.3
-mss==9.0.1
+mss
 mysql-connector==2.2.9
 mysql-connector-python
 mysqlclient==2.2.0
