@@ -52,5 +52,6 @@ protobuf==3.20.3
 psutil==5.9.5
 pure-eval==0.2.2
 PyAutoGUI==0.9.54
+seaborn==0.12.2
 gunicorn
 mouseinfo
